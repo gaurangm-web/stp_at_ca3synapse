@@ -1,6 +1,6 @@
 # stp_at_ca3synapse
 
-This program simulates transmission of presynaptic inputs as a sequence of AP-evoked transmitter release events governed by 
+The program "stpmodel.py" simulates transmission of presynaptic inputs as a sequence of AP-evoked transmitter release events governed by 
 a reduced model of short-term plasticity, mimicking key properties of facilitating CA3 synapses (please refer to Mahajan & Nadkarni (2019), bioRxiv/748400 for details).
 
 Input signal s(t) models random place field crossings (at mean rate r_s) + variable firing frequency (s_min to s_max)
