@@ -24,11 +24,11 @@ Estimates expected to be accurate when delta_t,tau_R << 1/r_s and tau_R << 1/r_n
 ---------------
 Added Dec 2020:
 
-The code "pre_post_lifmodel.py" extends the STP model to include a description of the postsynatic voltage response evoked by neurotransmitter binding to postsynaptic receptors. The postsynaptic membrane potential (V) is regulated by AMPAR, NMDAR, and leak currents, and the time profile of V(t) is tracked in response to a sequence of vesicular release events. Parameters and model details are adopted from Destexhe et al., Kinetic models of synaptic transmission (1998).
+The code "pre_post_lifmodel.py" extends the STP model to include a description of the postsynatic voltage response evoked by neurotransmitter binding to postsynaptic receptors. The postsynaptic membrane potential (V) is regulated by AMPAR, NMDAR, and leak currents, and the time profile of V(t) is tracked in response to a sequence of vesicular release events. Parameters and model details for this part are adopted from Destexhe et al., Kinetic models of synaptic transmission (1998).
 
-For each PF pass, the corresponding pre-syn input frequency (f) and peak of the post-syn voltage response (PSP size) are recorded. MI over the simulated time window for this joint distribution of discrete and continuous variables is estimated using the non-parametric method implemented in scikit-learn (sklearn.feature_selection.mutual_info_regression) which is based on B. C. Ross, “Mutual Information between Discrete and Continuous Data Sets”, PLoS ONE 9(2), 2014.
+For each PF crossing, the corresponding pre-syn firing frequency (f) and peak of the post-syn voltage response (PSP size) are recorded. MI over the simulated time window for this joint distribution of discrete and continuous variables is estimated using the non-parametric method implemented in scikit-learn (sklearn.feature_selection.mutual_info_regression) which is based on B. C. Ross, “Mutual Information between Discrete and Continuous Data Sets”, PLoS ONE 9(2), 2014.
 
 Outputs of the model:
 Time traces of various quantities of interest;
 MI estimate (per trial);
-Total charge flow across the postsynaptic membrane per trial (separately for the leak, AMPAR and NMDAR currents) as proxy for postsynaptic energy usage (e.g. Harris et al., Current Biol. 25 (2015))
+Total charge flow across the postsynaptic membrane per trial (separately for the leak, AMPAR and NMDAR currents) as proxy for synaptic energy usage (e.g. Harris et al., Current Biol. 25 (2015))
